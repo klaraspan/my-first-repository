@@ -4,8 +4,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 
+\usepackage{amsmath}
 \usepackage{url}
 \usepackage{amsthm}
+
+\usepackage{booktabs}
 
 % Nastavimo koliko prostora izpustimo pod napisom nad sliko ali tabelo.
 \setlength{\belowcaptionskip}{2mm}
@@ -72,29 +75,39 @@ Prirejeno po:
       stolpca ali vsa števila v katerikoli od glavnih diagonal.
 \end{definicija}
 
-Primer magičnega kvadrata reda 3 je prikazan v tabeli ??. % sklic: table:mag3
+Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}. % sklic: table:mag3
 
 
 % - napis nad tabelo: Magični kvadrat reda 3
 % - oznaka: table:mag3
 
 
-   magičnega kvadrata
-   %   8 & 1 & 6 \\\hline
-   %   3 & 5 & 7 \\\hline
-   %   4 & 9 & 2 \\\hline
+   % Začetek magičnega kvadrata
+\begin{table}[h]
+\centering
+\caption{Magični kvadrat reda 3}
+\label{table:mag3}
+      \large
+      \begin{tabular}{|c|c|c|}
+         8 & 1 & 6 \\\hline
+         3 & 5 & 7 \\\hline
+         4 & 9 & 2 \\\hline
+      \end{tabular}
+      \normalsize
+\end{table}
    % Konec magičnega kvadrata
 
 
 \begin{definicija}
    Magični kvadrat reda \(n\) je \emph{normalen}, če v njem nastopajo števila
+   \label{eq:numbers}
    \begin{equation}
       % oznaka: eq:numbers
       1, 2, 3, \ldots, n^2-1, n^2.
    \end{equation}
 \end{definicija}
 
-Magični kvadrat v tabeli ?? je normalen.
+Magični kvadrat v tabeli \ref{table:mag3} je normalen.
 To je tudi najmanjši netrivialen normalen magični kvadrat.
 Poleg normalnih magičnih kvadratov so zanimivi tudi magični kvadrati praštevil. % sklic: table:mag3
 
@@ -171,33 +184,32 @@ in zato kvadrat ni normalen.
 
 \begin{izrek}
 
-   Magična konstanta normalnega magičnega kvadrata reda !!
+   Magična konstanta normalnega magičnega kvadrata reda $n$
    je enaka
    \begin{equation}
       % oznaka: eq:mc
       % Okolje `equation` je že prikazni matematični način,
       % zato tu izraz vpišite brez `\[` in `\]`.
-      !!
+      M_2(n) = \frac{1}{2}n(n^2+1)
    \end{equation}
    \end{izrek}
 % Konec okolja izrek
 
 \begin{proof} dokaza
    V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
-   števil (glej ?? na strani ??) enaka
-   !!. Ker imamo
+   števil (glej \eqref{table:stevila} na strani \pageref{table:stevila}) enaka
+   $1+2+3+\dots+n^2 =\sum_{k = 1}^{n^2} k = \frac{1}{2}n^2(n^2+1)$ . Ker imamo
    v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
    enaka številu \(M_2(n)\). % sklica: eq:numbers, eq:numbers
 \end{proof}
 
-Preprost račun pokaže, da je konstanti ?? analogna konstanta
+Preprost račun pokaže, da je konstanti \eqref{table:stevila} analogna konstanta
 \(M_2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
 \(A\), \(A+D\), \(A+2D\), \ldots, \(A+(n^2-1)D\), enaka % sklic: eq:mc
-!!
-
+$M_2(n;A,D) = \frac{1}{2}n(2\cdot A + D\cdot (n^2-1))$
 \begin{definicija}
       Če vsako od števil v normalnem magičnem kvadratu reda \(n\) odštejemo
-      od števila !!, dobimo nov magični kvadrat, ki je prvotnemu
+      od števila $n^2+1$, dobimo nov magični kvadrat, ki je prvotnemu
       \emph{komplementaren}.
 \end{definicija}
 
@@ -206,23 +218,25 @@ Preprost račun pokaže, da je konstanti ?? analogna konstanta
       iz drugega s pomočjo zasukov oziroma zrcaljenj.
 \end{definicija}
 
-Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli ??.
+Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli \eqref{table:stevila}.
 % sklic: table:stevila
 
 % - napis nad tabelo: Število različnih normalnih magičnih kvadratov
 % - oznaka: table:stevila
 \begin{table}[!ht]
 \centering
-\hline
-\begin{tabular}{|l|c|c|c|c|c|c|}
-      \textbf{točna} \textbf{vrednost} \textbf{približek}
-      red 1 2 3 4 5 6
+\caption{Število različnih normalnih magičnih kvadratov}
+\label{table:stevila}
+   \begin{tabular}{lcccccc}
+      \toprule
+      &\multicolumn{5}{c}{točna vrednost} & približek \\
+      \midrule
+      red & 1 & 2 & 3 & 4 & 5 & 6\\
       % Decimalno vejico v matematičnem načinu zapišite kot {,},
       % sicer jo LaTeX izpiše kot ločilo, s presledkom za njo.
-      število kvadratov 1 0 1 880 275305224 !!
-\end{tabular}
-\caption{Število različnih normalnih magičnih kvadratov}
-\label{tab:stevila}
+      število kvadratov & 1 & 0 & 1 & 880 & 275305224 & $ (1{,}7745 \pm 0{,}0016)\cdot 10^{19}$\\
+      \bottomrule
+   \end{tabular}
 \end{table}
 % Konec tabele
 
