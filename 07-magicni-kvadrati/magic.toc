@@ -6,5 +6,5 @@
 \contentsline {subsection}{\numberline {2.3}Zgodnji kvadrati reda 4}{3}{}%
 \contentsline {paragraph}{Magični kvadrat v litografiji Melancholia I}{3}{}%
 \contentsline {paragraph}{Pasijonska fasada na katedrali Sagrada família v Barceloni}{4}{}%
-\contentsline {section}{\numberline {3}Osnovne lastnosti}{4}{}%
+\contentsline {section}{\numberline {3}Osnovne lastnosti}{5}{}%
 \contentsline {section}{\numberline {4}Primeri}{6}{}%
