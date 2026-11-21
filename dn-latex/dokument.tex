@@ -6,6 +6,8 @@
 \usepackage[slovene]{babel}
 
 \usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \title{Brownovo gibanje}
 \author{Matej Rojec}
@@ -18,14 +20,18 @@
 \theoremstyle{plain}
 \newtheorem{izrek}{Izrek}
 
+
 \begin{document}
 
-Brownovo gibanje (več v ??) je intuitivno slučajen proces, % Sklic na knjigo
+\maketitle
+
+Brownovo gibanje (več v \cite{karatzas1991brownian}) je intuitivno slučajen proces, % Sklic na knjigo
 ki predstavlja naključno gibanje delcev v mediju.
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.3\textwidth]{PerrinPlot2.pdf}  
-  \caption{Reprodukcija slike iz Jean Baptiste Perrin}
+  \caption{Reprodukcija slike iz Jean Baptiste Perrin, \emph{Mouvement brownien et réalité moléculaire}, Ann. de Chimie et de Physique (VIII) 18, 5-114, 1909
+}
   \label{fig:brownovo-gibanje}
 \end{figure}   
     % Slika: PerrinPlot2.pdf, velikost scale=0.3
@@ -41,6 +47,7 @@ ki predstavlja naključno gibanje delcev v mediju.
         \item Za vsak \(t \geq 0\) in \(h > 0\) velja \(B_{t+h} - B_t \sim \mathcal{N}(0, h)\).
         \item Funkcija \(t \mapsto B_t\) je zvezna skoraj gotovo.
         \end{itemize}
+        \label{thm:stopped_brownian}
     \end{definicija}
     % Konec definicije
     
@@ -48,23 +55,27 @@ ki predstavlja naključno gibanje delcev v mediju.
     
     % Začetek definicije
     \begin{definicija}
-    Slučajna spremenljivka \(\tau\) na verjetnostnem prostoru !! z vrednostmi v !!
-    je čas ustavljanja glede na filtracijo !!, če velja: !!.
+    Slučajna spremenljivka \(\tau\) na verjetnostnem prostoru $(\Omega, \mathcal{F}, P)$ z vrednostmi v $\mathbb{R}^+$
+    je čas ustavljanja glede na filtracijo $(\mathcal{F}_t)_{t \in T}$, če velja: $\forall t \in T: \{{\tau \leq t\} \in \mathcal{F}_t }$.
     \end{definicija}
     % Konec definicije
     
-    Zdaj lahko zapišemo izrek ??. % Sklic na izrek z oznako thm:stopped_brownian
+    Zdaj lahko zapišemo izrek \ref{thm:stopped_brownian}. % Sklic na izrek z oznako thm:stopped_brownian
     
     % Začetek izreka
     \begin{izrek}
     Naj bo \(\{B_t\}_{t \geq 0}\) (standardno) Brownovo gibanje, \(\tau\) čas ustavljanja glede na
-    !! in naj velja !!.
+    $(\mathcal{F}_t)_{t\geq0}$ in naj velja $P[{\scriptscriptstyle\mathcal{T}}<\infty]$.
     Potem je tudi proces:
     \[
     \hat{B} := \{B_{\tau+t} - B_\tau \mid t \geq 0\}
     \]
-    (standardno) Brownovo gibanje in neodvisen od !!.
+    (standardno) Brownovo gibanje in neodvisen od $\mathcal{F}_\mathcal{T}$.
     \end{izrek}
     % Konec izreka
+    %literatura
+    \bibliographystyle{plain}
+    \bibliography{knjiga}
+
     
 \end{document}
