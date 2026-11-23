@@ -19,14 +19,16 @@
 \end{frame}
 
 \begin{frame}{Poudarjeni bloki}
-	\begin{alertblock}{}
+	
 		
 	
 	% Naloga 2.3.2:
 	% Oblikujte poudarjena bloka z opombo in opozorilom.
-
+    \begin{exampleblock}{Opomba}
+		
+	\end{exampleblock}
 		Okolja za poudarjene bloke so \texttt{block}, \texttt{exampleblock} in \texttt{alertblock}.
-
+    \begin{alertblock}{Pozor!}
 		Začetek poudarjenega bloka (ukaz \texttt{begin}) vedno sprejme 
 		dva argumenta: okolje in naslov bloka.
 		Drugi argument (za naslov) je lahko prazen. 
@@ -49,8 +51,8 @@
 	   Denimo, da je praštevil končno mnogo.
 		% Z neobveznim argumentom [<+->] okolja itemize določimo,
 		% da se elementi naštevanja odkrivajo postopoma.
-	   \begin{itemize}
-		  \item Naj bo \(p\) \alert{največje} praštevilo.
+	   \begin{itemize}[<+->]
+		  \item Naj bo \(p\) \alert<4>{največje} praštevilo.
 		  \item Naj bo \(q\) produkt števil \(1\), \(2\), \ldots, \(p\).
 		  \item Število \(q+1\) ni deljivo z nobenim praštevilom, torej je \(q+1\) praštevilo.
 		  \item To je protislovje, saj je \(q+1>p\). \qedhere
