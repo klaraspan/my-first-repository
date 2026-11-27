@@ -23,11 +23,11 @@
 Poišči preneksno obliko formule $\exists x: P(x)\land\forall x: \Rightarrow \forall x : R(x)  $
 
 \item
-Definiramo množici $A = \left[2, 5\right]  $ in $B = \{0,1,2,3,4,dots \}$ .
+Definiramo množici $A = \left\lceil 2,5\right\rceil  $ in $B = \{0,1,2,3,4,\dots \}$ .
 V ravnino nariši:
 \begin{enumerate}
-\item $(a)  A\cap B\times \emptyset $
-\item $(b)  A\cup $
+\item $  A\cap B\times \emptyset $
+\item $  A\cup $
 \end{enumerate}
 
 \item
@@ -55,7 +55,7 @@ t \in [0, 2 \pi]
 \]
 
 \item
-Pokaži, da ima $f(x)=3x + \sin(2x)$ inverzno funkcijo in izračunaj $(f^-1)(3\pi)$.
+Pokaži, da ima $f(x)=3x + \sin(2x)$ inverzno funkcijo in izračunaj $(f^-1)'(3\pi)$.
 
 \item
 Izračunaj integral
@@ -71,8 +71,8 @@ $\int_{0}^{1} \frac{g(x)}{x^2} \,dx $
 konvergira ali divergira? Utemelji.
 
 \item
-S Taylorjevo formulo pokaži, da v okolici točke \(0\) velja
-$\sin x = x- \frac{x^3}{3!} + \mathcal{O} (x^5)$
+S Taylorjevo formulo pokaži, da v okolici točke \(0\) velja \\
+$\qquad \sin x = x- \frac{x^3}{3!} + \mathcal{O} (x^5)$
 \end{enumerate}
 
 \section*{Kompleksna števila}
@@ -85,7 +85,7 @@ Dokaži, da je število $ i \, \frac{z+1}{z-1} $ realno.
 \item
 Poenostavi izraz:
 % V rešitvi so notranji ulomki zapisani z ukazom dfrac.
-$\frac{\dfrac{3+\imath}{2-2\imath}+ \dfrac{7\imath}{1-\imath}}{1+ \dfrac{\imath-1}{4}-\dfrac{5}{2-3\imath}}$
+$\displaystyle \frac{\dfrac{3+\imath}{2-2\imath}+ \dfrac{7\imath}{1-\imath}}{1+ \dfrac{\imath-1}{4}-\dfrac{5}{2-3\imath}}$
 \end{enumerate}
 
 \section*{Zaporedja, vrste in limite}
@@ -159,8 +159,13 @@ $$
 Naj bo
 % Definiciji množic G in H sta v rešitvi poravnani pri enačaju, z okoljem align*.
 % Zavita oklepaja napišete kot \{ in \}, presledek za podpičjem pa z ukazom \;
-$G - \{ z \in \mathbb{C} ; z-2^k(\cos(m\pi\sqrt{2}+\imath\mathbb{C} \sin(m\pi\sqrt{2}))),k,m\in\mathbb{Z})$
-$H-\{(x,y)\in \mathbb{R}^2; x,y\in \mathbb{Z} \}$
+
+\begin{align*}
+\quad G&=  \{ z \in \mathbb{C} ; z-2^k(\cos(m\pi\sqrt{2}+\imath\mathbb{C} \sin(m\pi\sqrt{2}))),k,m\in\mathbb{Z})\\
+\quad H &=\{(x,y)\in \mathbb{R}^2; x,y\in \mathbb{Z} \}
+\end{align*}
+
+ 
 \begin{enumerate}
 \item
 Pokaži, da je \(G\) podgrupa v grupi $(\mathbb{C} \backslash  \{0\},\cdot)$
@@ -171,8 +176,8 @@ Pokaži, da je \(H\) podgrupa v aditivni grupi $(\mathbb{R} ^2, +)$
 ravninskih vektorjev za običajno seštevanje po komponentah.
 
 \item
-Pokaži, da je preslikava \(f:H\to G\), podana s pravilom
-$(x,y)\mapsto 2^x(\cos y\pi\sqrt)+(\imath\sin(y\pi\sqrt{2}))$
+Pokaži, da je preslikava \(f:H\to G\), podana s pravilom\\
+$\qquad (x,y)\mapsto 2^x(\cos y\pi\sqrt{2})+(\imath\sin(y\pi\sqrt{2}))$\\
 izomorfizem grup \(G\) in \(H\).
 \end{enumerate}
 
